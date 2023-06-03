@@ -1,0 +1,53 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/aboutme">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="main">
+     <div class="blog" > 
+      <div class="post">
+       <div class="content"> 
+        <div class="single">  
+    
+    <img src="/static/images/{{post.thumbnail}}"/>
+    <h2>{{ post.title }}</h2>
+    <h5>Posted by {{ post.author }}   &nbsp;&nbsp;&nbsp; 
+      date:{{post.date}}
+    </h5> 
+    <!-- {% for tag in x.tags %}
+    <div class="tag">
+      <a href="/tag/{{tag.name}}">{{tag.name}}</a>
+
+      </div>
+    {% endfor %} -->
+  </div>
+    <div class="post-content">
+        {{ post.body | safe }}
+    </div>
+    
+   
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

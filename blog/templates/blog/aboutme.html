@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+      
+      <li><a href="/aboutme">About Me</a></li>
+      <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+      <div class="main">
+        <div class="blog">
+          <div class="post noMargin">
+            <div class="content">
+              <h3 id="title">Siddharth kinger</h3>
+              <h5>Fitness enthusiast and businessman</h5>
+              {{  bio|safe }}
+              </div>
+            </div>
+        </div>
+      </div>  
+
+</body>
+</html>
